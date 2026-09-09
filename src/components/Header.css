@@ -1,0 +1,28 @@
+.header {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+}
+
+.header__logo {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.header__link {
+  padding: var(--space-1) 0;
+}

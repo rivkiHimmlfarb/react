@@ -1,0 +1,89 @@
+/* ===== משתני עיצוב גלובליים ===== */
+:root {
+  /* צבעים */
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f7;
+  --color-text: #1d1d1f;
+  --color-text-muted: #6e6e73;
+  --color-border: #e3e3e6;
+  --color-accent: #3742fa;
+  --color-accent-contrast: #ffffff;
+
+  /* גופנים */
+  --font-sans:
+    system-ui, 'Segoe UI', 'Frank Ruhl Haim', 'Rubik', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  /* מרווחים */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  /* גדלים */
+  --radius: 0.5rem;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  /* טיפוגרפיה */
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== איפוס ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100svh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== כלים ===== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

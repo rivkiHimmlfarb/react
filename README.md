@@ -1,16 +1,58 @@
-# React + Vite
+# my-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+פרויקט בסיס נקי ומאורגן — React + Vite + JavaScript.
 
-Currently, two official plugins are available:
+התבנית הזו משמשת כנקודת התחלה ליישום חדש. היא כוללת מבנה תיקיות ברור,
+משתני עיצוב גלובליים, וקומפוננטות בסיסיות לשימוש חוזר.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## הרצה מקומית
 
-## React Compiler
+דרישות מוקדמות: [Node.js](https://nodejs.org/) (מומלץ גרסה 20 ומעלה).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# התקנת תלויות (בפעם הראשונה)
+npm install
 
-## Expanding the Oxlint configuration
+# הרצת שרת הפיתוח
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+פתחו את הכתובת שמוצגת בטרמינל (ברירת מחדל: `http://localhost:5173`).
+
+### סקריפטים
+
+| פקודה            | תיאור                                   |
+| ---------------- | --------------------------------------- |
+| `npm run dev`    | שרת פיתוח עם Hot Module Replacement     |
+| `npm run build`  | בנייה לייצור לתיקיית `dist/`            |
+| `npm run preview`| צפייה מקומית בגרסת הייצור               |
+| `npm run lint`   | בדיקת קוד עם Oxlint                     |
+
+## מבנה הפרויקט
+
+```
+src/
+├── assets/            # קבצים סטטיים (תמונות, אייקונים וכדומה)
+├── components/        # קומפוננטות כלליות לשימוש חוזר (Button, Header...)
+├── hooks/             # הוקים מותאמים אישית (useCounter...)
+├── pages/             # דפים/מסכים של היישום (Home...)
+├── styles/            # קבצי CSS גלובליים
+├── utils/             # פונקציות עזר כלליות (cx...)
+├── App.jsx            # קומפוננטת השורש
+└── main.jsx           # נקודת הכניסה — תלוי את React אל ה־DOM
+```
+
+### הנחיות שימוש
+
+- **קומפוננטות** — כל קומפוננטה בתיקייה משלה עם קובץ סגנון צמוד
+  (`Button.jsx` + `Button.css`). קומפוננטות בדף ספציפי שייכות לדף עצמו,
+  ולכן ממוקמות בתיקיית `pages/`.
+- **משתני עיצוב** — הגדירו צבעים, גדלים ומרווחים פעם אחת ב־
+  [src/styles/index.css](src/styles/index.css) והיעזרו בהם בכל מקום.
+- **CSS** — מומלץ להשתמש ב־CSS Modules או בשמות מחלקות לפי שמות הקומפוננטות
+  כדי למנוע התנגשויות.
+
+## תוספת מומלצת
+
+אם תזדקקו לאפשרויות מתקדמות (Data Fetching, ניווט בין דפים, ניהול מצב)
+ניתן להוסיף חברות מוכרות כמו `react-router-dom` ו־`@tanstack/react-query`.
